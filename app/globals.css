@@ -1,26 +1,24 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  /* Cor da clínica — substituída pela cor_primaria do consultório na tela principal */
+  --marca: #1e40af;
+  --marca-suave: color-mix(in srgb, var(--marca) 14%, transparent);
+  --marca-fundo: color-mix(in srgb, var(--marca) 6%, white);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f8fa;
+  color: #0f172a;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+input[type="number"]::-webkit-inner-spin-button { opacity: 0.4; }
+select { cursor: pointer; }
+::selection { background: var(--marca-suave); }

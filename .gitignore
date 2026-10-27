@@ -43,3 +43,6 @@ next-env.d.ts
 "node_modules/" 
 ".next/" 
 ".env.local" 
+
+# banco de dados local (nunca vai para o git)
+/dados/
